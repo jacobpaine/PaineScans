@@ -1,1 +1,2 @@
-# PaineScans
+# IonicBarcodeScannerApp
+

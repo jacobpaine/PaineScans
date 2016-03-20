@@ -1,0 +1,37 @@
+<ion-view>
+  <ion-content>
+
+	<div ng-app="starter"> 
+		<div ng-controller="HomeCtrl">
+
+
+			<ul>
+			  	<ul ng-repeat="doc in response.data.response.zone" ng-init="{{item.name}}">
+					<div ng-if="doc.name == 'book'"> 
+						<ul ng-repeat="book in doc.records.work">
+							<form action="http://192.168.0.16:5000/books" method="POST">
+							    <p>{{doc.name}}</p>
+							    <p>Title:
+							    	<input type="text" ng-model="book.title" placeholder="Edit Title of Book" style="width:550px; border:solid black 1px" name="title">
+							    </p>
+							   	<p>Author(s)
+							   		<input type="text" ng-model="book.contributor" placeholder="Edit Author(s)" style="width:550px; border:solid black 1px" name="author">
+							   	</p>
+							   	<p>Location: {{location}} 
+							   		<input type="text" ng-model="location" placeholder="Edit Location" style="border:solid black 1px" name="location" value="N/A">
+							   	</p>
+							   	<input type="submit" value="Submit to Database">
+		  					</form>
+						</ul>
+					</div>
+				</ul>
+			</ul>
+		</div>
+	</div>
+  	<div style='background:red;display:table;margin:40% auto;padding:10px;color:white'ng-click='scan()'>
+        Click Here to Scan
+    </div>
+
+
+  </ion-content>
+</ion-view>
