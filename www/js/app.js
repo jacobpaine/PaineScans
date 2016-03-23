@@ -22,9 +22,13 @@ angular.module('starter', ['ionic','ngCordova'])
 })
 
 
+
+
+
 .controller('HomeCtrl', ['$http', '$scope','$cordovaBarcodeScanner','$ionicPlatform',function($http, $scope, $cordovaBarcodeScanner, $ionicPlatform) {
 
-// http://api.trove.nla.gov.au/result?q=9780385487429&zone=all&key=oe7lmq69cf9hflll&encoding=json
+
+  $scope.action = 'http://10.0.0.89:3000/books';
 
   $scope.scan = function(){
     $ionicPlatform.ready(function() {

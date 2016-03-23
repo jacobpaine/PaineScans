@@ -1,7 +1,7 @@
 {
-  "name": "ionicbarcodescannerapp",
+  "name": "PaineScans",
   "version": "1.0.0",
-  "description": "IonicBarcodeScannerApp: An Ionic project",
+  "description": "PaineScans: A scanner for PaineReads",
   "dependencies": {
     "cordova-plugin-whitelist": "^1.2.1",
     "gulp": "^3.5.6",
