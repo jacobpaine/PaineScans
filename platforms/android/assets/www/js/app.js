@@ -43,7 +43,6 @@ angular.module('starter', ['ionic','ngCordova'])
       var isbn = result.text;
       var jsonEncoding= '&encoding=json';
       var url = 'http://api.trove.nla.gov.au/result?q='+ isbn +'&zone=all&key='+ apikey + jsonEncoding;
-//$http.get('/someUrl', config).then(successCallback, errorCallback);
         $http({
           method: 'GET',
           url:url

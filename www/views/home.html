@@ -8,7 +8,6 @@
 		  	<ul ng-repeat="doc in response.data.response.zone" ng-init="{{item.name}}">
 				<div ng-if="doc.name == 'book'"> 
 					<ul ng-repeat="book in doc.records.work">
-						<!-- <form action="http://10.0.0.89:3000/books" method="POST"> -->
 						<form action="{{action}}" method="POST">
 						    <p>{{doc.name}}</p>
 						    <p>Title:
@@ -17,8 +16,8 @@
 						   	<p>Author(s)
 						   		<input type="text" ng-model="book.contributor" placeholder="Edit Author(s)" style="width:550px; border:solid black 1px" name="author">
 						   	</p>
-						   	<p>Location: {{location}} 
-						   		<input type="text" ng-model="location" placeholder="Edit Location" style="border:solid black 1px" name="location" value="N/A">
+						   	<p>Location:
+						   		<input type="text" ng-model="location" style="border:solid black 1px" name="location" value="Bookshelf" required autofocus>
 						   	</p>
 						   	<input type="submit" value="Submit to Database">
 	  					</form>
@@ -32,8 +31,8 @@
           	</div>
 		</div>
 	</div>
-  	<div style='background:red;display:table;margin:40% auto;padding:10px;color:white'ng-click='scan()'>
-        Click Here to Scan
+  	<div style='background:green;display:table;margin:40% auto;padding:10px;color:white'ng-click='scan()'>
+        Click to Scan
     </div>
 
 

@@ -1,1 +1,8 @@
 /* Empty. Add your own CSS if you like */
+input:focus { 
+    border-color: red;
+}
+
+form.p.input{
+	background-color: orange;
+}
