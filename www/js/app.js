@@ -28,7 +28,8 @@ angular.module('starter', ['ionic','ngCordova'])
     'self',
     // Allow loading from our assets domain.  Notice the difference between * and **.
     'http://10.**',
-    'http://192.168.**'
+    'http://192.168.**',
+    'https://obscure-waters-34258.herokuapp.com/**'
   ]);
 })
 

@@ -8,7 +8,12 @@
 		  	<ul ng-repeat="doc in response.data.response.zone" ng-init="{{item.name}}">
 				<div ng-if="doc.name == 'book'"> 
 					<ul ng-repeat="book in doc.records.work">
+
+
 						<form action="{{action}}" method="POST">
+					
+
+
 						    <p>{{doc.name}}</p>
 						    <p>Title:
 						    	<input type="text" ng-model="book.title" placeholder="Edit Title of Book" style="width:550px; border:solid black 1px" name="title">
@@ -19,7 +24,11 @@
 						   	<p>Location:
 						   		<input type="text" ng-model="location" style="border:solid black 1px" name="location" value="Bookshelf" required autofocus>
 						   	</p>
+						
 						   	<input type="submit" value="Submit to Database">
+	  					
+
+	  					
 	  					</form>
 					</ul>
 				</div>
