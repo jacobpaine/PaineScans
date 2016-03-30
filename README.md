@@ -1,11 +1,13 @@
+
 # PaineScans
+PaineScans is an Ionic app for Android intended to be used in conjunction with PaineReads. PaineScans uses the mobile device's camera to scan the barcode to collect an ISBN. The ISBN is then checked using the [Trove](http://trove.nla.gov.au/) API. That data then populates inputs in the device. The user can then post to a PostgreSQL database. The address of the database is provided dynamically by an available input box. 
 
-First, type the IP address of your SQL database. This is found at 
-	System Preferences -> Network -> Advanced -> IPv4 Address
+If the scan says "Found Product", this particular ISBN isn't found in the National Library of Australia's database, so it will have to put in manually via the PaineReads application.
 
-Once this has been input, scan a barcode of book and submit. 
+If the user is posting to a locally served database, the mobile device will need to be on the same server as the machine running the database. Otherwise, there will be security conflicts. 
 
-Troubleshooting:
-	If the scan says "Found Product", this particular ISBN isn't found in the National Library of Australia's database, so it will have to put in manually via the application.
+## Relevant Tools
+The NSS Cohort 11 website was built using Jekyll and Bootstrap. Materialize CSS was used to for the photo carousel. 
 
-	The scanning phone and the server MUST be on the same router.
+## License
+Released under the MIT license
